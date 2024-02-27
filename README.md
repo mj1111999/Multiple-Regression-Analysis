@@ -1,12 +1,18 @@
 # Multiple-Regression-Analysis
+
 Abstract—This research paper discusses about house price prediction using multiple linear regression. The dataset that was analysed on houses at King County, Seattle for year 2014-2015. The steps that were involved in analysis are dataset description, descriptive statistics, preprocessing, Model Review Selection and prediction.
 Index Terms—Multiple linear regression, preprocessing, de- scriptive statistics, preprocessing, model and prediction.
+
 I. AIM AND OBJECTIVE
-The aim of this project is to use descriptive statistics and utilize multiple linear regression model to find how price of the house holds on multiple dependent variables. The reason for evaluating descriptive statistics are to find basic information of the variables in the dataset and to find connection between the variables.
+
+This project aims to use descriptive statistics and utilize multiple linear regression model to find how price of the house holds on multiple dependent variables. The reason for evaluating descriptive statistics are to find basic information of the variables in the dataset and to find connection between the variables.
 A straight line is used to assess the relationship between a quantitative dependent variable and two or more independent variables in a regression model called multiple linear regres- sion.[1]
+
 The expression for multiple linear regression is:
 Y =β0 +β1 ∗b1 +β2 ∗b2 +β3 ∗b3 +...+βp ∗bp (1) The above expression is implemented using R programming.
+
 II. DATASET DESCRIPTION AND ITS VARIABLES
+
 The dataset provided was ”kc-house-data.csv”. This file contains 21,613 rows and 21 columns(also known as feature variables). In this dataset, it contains one single dependent variable known as price and 20 other variables as the inde- pendent variables. [2]
 The description of of the given dataset is as follows:
 • id - House’s identification number
@@ -33,16 +39,18 @@ not renovated
 living areas in the 15 nearest houses.
 • sqft-lot15 - The mean square footage of the lots for the
 15 nearest houses
+
 III. DESCRIPTIVE STATISTICS
+
 With R programming, there are variety of functions that can evaluate median, mean, mode, standard deviation, variance etc. Descriptive statistics is a process in which one can study and investigate the data. To identify the number of samples ’N’ nrow command was used. The min function gives the minimum value of the value of the sample, the max function gives the maximum value of the sample. Apart from the analysis of descriptive statistics, visualizations of appropriate variables were plotted as show in the figures below. [3]
 IV. PREPROCESSING
 In this step, the dataset analysis was done by identifying any kind duplication of records or if any kind of data which is missing before the multiple regression model was built. Also certain data types were converted into another data type of the
  Fig. 1. Descriptive Statistics
 variables, for example, the waterfront variable of the housing dataset was converted to factors using as.factor() command as it was a categorical variable. A correlation plot was generated to check which variables are to be considered for multiple linear regression analysis and which variables reduces the accuracy of the analysis (as shown in Fig. 1). Certain column variables were subsetted for analysis such as date, id, sqft- above and sqft-basement. To check whether missing values are there in the dataset is.na() command was used that will return a boolean values. To identify the number of duplicated values the duplicated function was used. The price values were having values which were in billion and were expressed in ten thousands by dividing by 1000000 for ease of understanding the data. [4]
-     Fig. 2. Visualizations
-Fig. 3. Correlation Plot
+     
 V. MODEL ANALYSIS AND REVIEW
-In order to create a linear model lm() function is used. For selecting the best model, 3 different models were analysed.
+
+To create a linear model lm() function is used. For selecting the best model, 3 different models were analysed.
 A. Model 1
 For designing this model, the parameters that were consid- ered for multiple linear regression are:
 1) sqft-living
